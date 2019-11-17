@@ -138,7 +138,7 @@ def sum_cond_prob_tokens_story(tokenList, dict, smoothing_value):
     print("Cal sum of cond prob  of story")
     for token in tokenList:
         if token in dict:
-            cond_prob = dict[token]
+            cond_prob = dict.get(token)
             prob = float(cond_prob[1])
             print("token", token, 'value is', prob)
             sum = sum + math.log10(prob)
@@ -155,7 +155,7 @@ def sum_cond_prob_tokens_ask_hn(tokenList, dict, smoothing_value):
     print("Cal sum of cond prob of ask hn")
     for token in tokenList:
         if token in dict:
-            cond_prob = dict[token]
+            cond_prob = dict.get(token)
             prob = float(cond_prob[3])
             print("token", token, 'value is', prob)
             sum = sum + math.log10(prob)
@@ -172,8 +172,8 @@ def sum_cond_prob_tokens_show_hn(tokenList, dict, smoothing_value):
     print("Cal sum of cond prob of show hn")
     for token in tokenList:
         if token in dict:
-            cond_prob = dict[token]
-            prob = float(cond_prob[3])
+            cond_prob = dict.get(token)
+            prob = float(cond_prob[5])
             print("token", token, 'value is', prob)
             sum = sum + math.log10(prob)
         else:
@@ -189,7 +189,7 @@ def sum_cond_prob_tokens_poll(tokenList, dict, smoothing_value):
     print("Cal sum of cond prob of poll")
     for token in tokenList:
         if token in dict:
-            cond_prob = dict[token]
+            cond_prob = dict.get(token)
             prob = float(cond_prob[7])
             sum = sum + math.log10(prob)
         else:
