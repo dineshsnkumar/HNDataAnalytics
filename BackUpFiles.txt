@@ -1,0 +1,40 @@
+def plotAccuracyPerformace():
+    smoothing_list = [x / 10 for x in range(1, 11)]
+    accuracy_score_list = trainingData.ACCURACY_SCORE_SMOOTHING_VALUES
+    x_pos = [i for i, _ in enumerate(smoothing_list)]
+    plt.bar(x_pos, accuracy_score_list)
+    plt.xlabel('Smoothing values')
+    plt.ylabel('Accuracy')
+    plt.xticks(x_pos, smoothing_list)
+    plt.show()
+
+def plotPrecisonPerformace():
+    smoothing_list = [x / 10 for x in range(1, 11)]
+    precision_score_list = trainingData.PRECISION_SCORE_SMOOTHING_VALUES
+    x_pos = [i for i, _ in enumerate(smoothing_list)]
+    plt.bar(x_pos, precision_score_list)
+    plt.xlabel('Smoothing values')
+    plt.ylabel('precision')
+    plt.xticks(x_pos, smoothing_list)
+    plt.show()
+
+def plotRecallPerformace():
+    smoothing_list = [x / 10 for x in range(1, 11)]
+    recall_score_list = trainingData.RECALL_SCORE_SMOOTHING_VALUES
+    x_pos = [i for i, _ in enumerate(smoothing_list)]
+    plt.bar(x_pos, recall_score_list)
+    plt.xlabel('Smoothing values')
+    plt.ylabel('recall')
+    plt.xticks(x_pos, smoothing_list)
+    plt.show()
+
+def plotf1scorePerformace():
+    smoothing_list = [x / 10 for x in range(1, 11)]
+    f1score_score_list = trainingData.F1_SCORE_SMOOTHING_VALUES
+    x_pos = [i for i, _ in enumerate(smoothing_list)]
+    plt.bar(x_pos, f1score_score_list)
+    plt.xlabel('Smoothing values')
+    plt.ylabel('f1_score')
+    plt.xticks(x_pos, smoothing_list)
+    plt.show()
+
